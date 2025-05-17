@@ -1,0 +1,100 @@
+1010,A01,110,76,James Young ,W12
+1010,A02,120,45,John Braico ,W12
+1010,A03,120,57,Michael Domaratzki ,W12
+1010,B01,28,10,Michael Domaratzki ,W12
+1010,B02,28,12,Michael Domaratzki ,W12
+1010,B03,28,8,Michael Domaratzki ,W12
+1010,B04,28,15,Michael Domaratzki ,W12
+1010,B05,28,7,Michael Domaratzki ,W12
+1010,B06,28,12,Michael Domaratzki ,W12
+1010,B07,28,19,Michael Domaratzki ,W12
+1010,B08,28,14,Michael Domaratzki ,W12
+1010,B09,28,14,Michael Domaratzki ,W12
+1010,B10,28,15,Michael Domaratzki ,W12
+1010,B12,28,18,,W12
+1010,B13,28,20,,W12
+1010,D01,500,488,Andrea Mantler ,W12
+1010,D02,500,496,Andrea Mantler ,W12
+1012,A01,150,57,Terrance Andres ,W12
+1012,B01,27,12,Terrance Andres ,W12
+1012,B02,28,8,Terrance Andres ,W12
+1012,B03,28,14,Terrance Andres ,W12
+1012,B04,28,7,Terrance Andres ,W12
+1012,B05,28,12,Terrance Andres ,W12
+1012,B06,28,21,Terrance Andres ,W12
+1020,A01,100,22,David Harvey Scuse ,W12
+1020,A02,70,20,Pourang Irani ,W12
+1020,A03,100,64,Robert Guderian ,W12
+1020,A91,1,0,Helen Cameron ,W12
+1020,B01,28,6,David Harvey Scuse ,W12
+1020,B02,28,1,David Harvey Scuse ,W12
+1020,B03,28,6,David Harvey Scuse ,W12
+1020,B04,28,18,David Harvey Scuse ,W12
+1020,B05,28,22,David Harvey Scuse ,W12
+1020,B06,28,13,David Harvey Scuse ,W12
+1020,B07,28,8,David Harvey Scuse ,W12
+1020,B08,28,23,David Harvey Scuse ,W12
+1020,B09,28,16,David Harvey Scuse ,W12
+1020,B10,28,25,David Harvey Scuse ,W12
+1020,B11,28,22,David Harvey Scuse ,W12
+1020,B12,28,11,David Harvey Scuse ,W12
+1021,A01,15,9,,W12
+1260,A01,150,12,Ryan Zier-Vogel ,W12
+1260,A02,85,11,Gord Boyer ,W12
+1260,A03,105,23,Christina Penner ,W12
+1260,A04,122,31,Terrance Andres ,W12
+1260,A05,0,0,,W12
+1260,D01,140,67,Syed Tanbeer ,W12
+1261,A01,20,5,Aboubacar Bagayogo ,W12
+1270,A01,105,61,Ruppa Thulasiram ,W12
+1270,A02,125,99,Desmond Walton ,W12
+1270,D01,75,48,Mehdi Niknam ,W12
+2080,A01,110,33,Parimala Thulasiraman ,W12
+2140,A01,72,18,Gord Boyer ,W12
+2140,A91,1,0,Gord Boyer ,W12
+2140,B01,24,4,Gord Boyer ,W12
+2140,B02,24,6,Gord Boyer ,W12
+2140,B03,24,8,Gord Boyer ,W12
+2140,D01,100,88,Andrea Mantler ,W12
+2150,A01,120,31,John Anderson ,W12
+2160,A01,75,17,Michael Zapp ,W12
+2160,B01,25,9,Michael Zapp ,W12
+2160,B02,25,4,Michael Zapp ,W12
+2160,B03,25,4,Michael Zapp ,W12
+2280,A01,100,8,Randall Cooper ,W12
+2280,B01,24,10,Randall Cooper ,W12
+2280,B02,24,1,Randall Cooper ,W12
+2280,B03,24,1,Randall Cooper ,W12
+2280,B04,24,22,Randall Cooper ,W12
+2280,B05,24,4,Randall Cooper ,W12
+2280,B06,24,14,Randall Cooper ,W12
+2980,A01,60,19,,W12
+3010,A01,47,31,Michael Zapp ,W12
+3040,A01,30,14,Christina Penner ,W12
+3170,A01,70,45,Helen Cameron ,W12
+3350,A01,85,47,John Braico ,W12
+3430,A01,85,35,Peter Graham ,W12
+3430,B01,24,12,Peter Graham ,W12
+3430,B02,24,1,Peter Graham ,W12
+3430,B03,24,11,Peter Graham ,W12
+3430,B04,24,22,Peter Graham ,W12
+3620,A01,25,0,Alan Marshall ,W12
+3980,A01,60,57,,W12
+4020,A01,40,14,Pourang Irani ,W12
+4060,T01,0,0,,W12
+4350,A01,50,9,Michael Zapp ,W12
+4360,A01,30,15,Jacky Baltes ,W12
+4380,A01,40,0,Carson Leung ,W12
+4420,A01,30,13,Stephane Durocher ,W12
+4490,A01,30,18,Desmond Walton ,W12
+4520,A01,10,7,Alan Marshall ,W12
+4550,A01,30,16,Jacky Baltes ,W12
+4560,A01,10,3,Alan Marshall ,W12
+4580,A01,54,27,Rasit Eskicioglu ,W12
+4980,A01,60,58,,W12
+7210,A01,20,8,Michael Domaratzki ,W12
+7570,T06,10,0,Parimala Thulasiraman ,W12
+7720,T01,15,9,Pakching Li ,W12
+7720,T03,15,9,John Van Rees ,W12
+7820,T01,15,0,Ruppa Thulasiram ,W12
+7860,T05,15,8,Rasit Eskicioglu ,W12

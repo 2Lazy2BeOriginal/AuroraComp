@@ -1,0 +1,97 @@
+1006,A01,50,16,John Braico ,W25
+1010,A01,110,14,Zach Havens ,W25
+1010,B01,24,3,Zach Havens ,W25
+1010,B02,24,4,Zach Havens ,W25
+1010,B03,24,3,Zach Havens ,W25
+1010,B04,24,3,Zach Havens ,W25
+1010,B05,24,11,Zach Havens ,W25
+1012,A01,150,29,Lauren Himbeault ,W25
+1012,A02,150,23,connor hryhoruk ,W25
+1012,B01,24,5,Lauren Himbeault  connor hryhoruk,W25
+1012,B02,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B03,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B04,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B05,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B06,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B07,24,7,Lauren Himbeault  connor hryhoruk,W25
+1012,B08,24,5,Lauren Himbeault  connor hryhoruk,W25
+1012,B09,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B10,24,4,Lauren Himbeault  connor hryhoruk,W25
+1012,B11,24,6,Lauren Himbeault  connor hryhoruk,W25
+1012,B12,24,3,Lauren Himbeault  connor hryhoruk,W25
+1012,B13,24,10,Lauren Himbeault  connor hryhoruk,W25
+1020,A01,110,10,Lauren Himbeault ,W25
+1020,A02,110,11,Hamid Mansoor ,W25
+1020,A03,110,17,Simon Wermie ,W25
+1020,A04,110,21,Pouya Aghahoseini ,W25
+1020,B01,24,1,Lauren Himbeault ,W25
+1020,B05,24,3,Lauren Himbeault ,W25
+1020,B06,24,0,Lauren Himbeault ,W25
+1020,B07,24,2,Lauren Himbeault ,W25
+1020,B08,24,3,Lauren Himbeault ,W25
+1020,B09,24,0,Lauren Himbeault ,W25
+1020,B10,24,5,Lauren Himbeault ,W25
+1020,B11,24,5,Lauren Himbeault ,W25
+1020,B12,24,4,Lauren Himbeault ,W25
+1020,B13,24,9,Lauren Himbeault ,W25
+1020,B14,24,2,Lauren Himbeault ,W25
+1020,B15,24,4,Lauren Himbeault ,W25
+1020,B18,24,7,Lauren Himbeault ,W25
+1020,B19,24,3,Lauren Himbeault ,W25
+1020,B20,24,7,Lauren Himbeault ,W25
+1020,B21,24,9,Lauren Himbeault ,W25
+1020,B22,24,2,Lauren Himbeault ,W25
+1020,B23,24,5,Lauren Himbeault ,W25
+1020,B24,24,4,Lauren Himbeault ,W25
+1020,D01,110,14,Heather Matheson ,W25
+1600,A02,150,9,Christina Penner ,W25
+2006,A01,24,11,Heather Matheson ,W25
+2080,A01,110,7,Avery Miller ,W25
+2080,A02,110,16,Tim Zapp ,W25
+2140,A01,96,5,Zoey Kitt ,W25
+2150,A01,110,12,Heather Matheson ,W25
+2150,A02,110,9,Olivier Tremblay-Savard ,W25
+2150,A03,110,48,Kaari Landry ,W25
+2160,A01,110,9,Tim Zapp ,W25
+2280,A01,110,8,David Gerhard ,W25
+2280,A02,110,16,Zach Havens ,W25
+2280,A03,110,58,Robert Guderian ,W25
+2600,A01,70,14,Tristan Miller ,W25
+3010,A01,90,48,Saulo dos Santos ,W25
+3060,T01,50,2,John Braico ,W25
+3170,A01,90,13,Jennifer Vaughan ,W25
+3190,A01,90,34,John Anderson ,W25
+3350,A01,75,4,Lauren Himbeault ,W25
+3350,A02,80,6,Saulo dos Santos ,W25
+3370,A01,100,51,Michael Zapp ,W25
+3380,A01,90,54,Patrick Dubois ,W25
+3430,A01,90,25,Franklin Bristow ,W25
+3430,A02,90,56,Franklin Bristow ,W25
+3490,A01,70,50,Chengzhou Tang ,W25
+4020,A01,40,18,Patrick Dubois ,W25
+4020,A02,40,6,Houda El Mimouni ,W25
+4060,T04,32,1,Robert Guderian  Aden Knelsen-Dobson,W25
+4060,T05,20,7,Robert Guderian ,W25
+4060,T14,33,14,James Young ,W25
+4060,T30,20,18,Michael Zapp ,W25
+4062,T05,5,1,Stephane Durocher ,W25
+4062,T07,5,3,Sara Rouhani ,W25
+4062,T08,5,5,Shaowei Wang ,W25
+4190,A01,40,10,Sadaf Salehkalaibar ,W25
+4350,A01,60,5,Shaowei Wang ,W25
+4360,A01,50,12,Christopher Henry ,W25
+4420,A01,40,23,Jennifer Vaughan ,W25
+4522,A01,1,0,Michael Zapp ,W25
+4522,A02,2,0,Michael Zapp ,W25
+4560,A01,31,0,Robert Guderian  Aden Knelsen-Dobson,W25
+4580,A01,40,6,Azadeh Tabiban ,W25
+4620,A01,50,8,Christina Penner ,W25
+4620,A02,50,27,Christina Penner ,W25
+4620,B01,100,35,Christina Penner ,W25
+7570,T05,5,0,James Young ,W25
+7570,T15,15,3,Sara Rouhani ,W25
+7720,T02,15,13,Jimmy Zhu ,W25
+7890,T02,15,4,Shaowei Wang ,W25
+7890,T04,0,0,,W25
+7920,T07,15,4,Andrea Bunt ,W25
+7922,A01,15,11,Stephane Durocher ,W25

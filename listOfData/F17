@@ -1,0 +1,101 @@
+1010,A01,150,38,John Bate ,F17
+1010,A02,105,23,Helen Cameron ,F17
+1010,A03,80,21,Josiane Kroll ,F17
+1010,A04,150,29,Michael Domaratzki ,F17
+1010,B01,28,6,John Bate ,F17
+1010,B02,28,8,John Bate ,F17
+1010,B03,28,8,John Bate ,F17
+1010,B04,28,3,John Bate ,F17
+1010,B05,28,7,John Bate ,F17
+1010,B06,28,5,John Bate ,F17
+1010,B07,28,8,John Bate ,F17
+1010,B08,28,7,John Bate ,F17
+1010,B09,28,9,John Bate ,F17
+1010,B10,28,12,John Bate ,F17
+1010,B11,28,1,John Bate ,F17
+1010,B12,28,4,John Bate ,F17
+1010,B13,28,7,John Bate ,F17
+1010,B14,28,5,John Bate ,F17
+1010,B15,28,9,John Bate ,F17
+1010,B16,28,6,John Bate ,F17
+1010,B17,28,21,John Bate ,F17
+1010,B18,28,20,John Bate ,F17
+1010,B19,28,12,John Bate ,F17
+1010,D01,500,426,Gabriel Faucher ,F17
+1012,A01,132,24,Gord Boyer ,F17
+1012,A02,120,18,Adam Pazdor ,F17
+1012,B01,28,5,Gord Boyer ,F17
+1012,B02,28,5,Gord Boyer ,F17
+1012,B03,28,2,Gord Boyer ,F17
+1012,B04,28,4,Gord Boyer ,F17
+1012,B05,28,3,Gord Boyer ,F17
+1012,B06,28,10,Gord Boyer ,F17
+1012,B07,28,5,Gord Boyer ,F17
+1012,B08,28,1,Gord Boyer ,F17
+1012,B09,28,7,Gord Boyer ,F17
+1013,A01,15,12,Aboubacar Bagayogo ,F17
+1020,A01,108,8,John Bate ,F17
+1020,B01,27,3,John Bate ,F17
+1020,B02,27,1,John Bate ,F17
+1020,B03,27,1,John Bate ,F17
+1020,B04,27,3,John Bate ,F17
+1020,D01,500,359,Gabriel Faucher ,F17
+1500,A01,100,66,Franklin Bristow ,F17
+1500,A02,100,27,Gord Boyer ,F17
+2130,A01,160,7,Ruppa Thulasiram ,F17
+2140,A01,94,4,Stephane Durocher ,F17
+2140,A02,98,8,Helen Cameron ,F17
+2140,B01,24,0,,F17
+2140,B02,24,3,,F17
+2140,B03,24,0,,F17
+2140,B04,24,2,,F17
+2140,B05,24,0,,F17
+2140,B06,24,2,,F17
+2140,B07,24,1,,F17
+2140,B08,24,4,,F17
+2160,A01,108,3,Stela Seo ,F17
+2160,A02,108,8,Yang Wang ,F17
+2160,B01,24,2,Yang Wang ,F17
+2160,B02,24,1,Yang Wang ,F17
+2160,B03,24,0,Yang Wang ,F17
+2160,B04,24,1,Yang Wang ,F17
+2160,B05,24,0,Yang Wang ,F17
+2160,B06,24,4,Yang Wang ,F17
+2160,B07,24,1,Yang Wang ,F17
+2160,B08,24,0,Yang Wang ,F17
+2160,B09,24,2,Yang Wang ,F17
+2190,A01,70,35,William Kocay ,F17
+2980,A01,60,59,John Braico ,F17
+3020,A01,100,3,Andrea Bunt ,F17
+3020,A02,80,7,James Young ,F17
+3030,A01,80,10,Avery Miller ,F17
+3040,A01,60,2,Christina Penner ,F17
+3190,A01,89,15,John Braico ,F17
+3370,A01,90,24,Parimala Thulasiraman ,F17
+3370,A02,98,1,Peter Graham ,F17
+3380,A01,121,2,Carson Leung ,F17
+3380,A02,76,3,Adam Pazdor ,F17
+3490,A01,110,4,Neil Bruce ,F17
+3980,A01,60,14,John Braico ,F17
+4050,A01,40,0,Franklin Bristow ,F17
+4060,T08,1,0,Olivier Tremblay-Savard ,F17
+4140,A01,60,0,Noman Mohammed ,F17
+4180,A01,21,9,Meng Lau ,F17
+4300,A01,60,22,Michael Zapp ,F17
+4510,A01,30,3,Ruppa Thulasiram ,F17
+4520,A01,6,1,Parimala Thulasiraman ,F17
+4560,A01,10,4,Parimala Thulasiraman ,F17
+4710,A01,61,0,Carson Leung ,F17
+4980,A01,60,53,John Braico ,F17
+4990,A01,30,30,John Braico ,F17
+7210,A01,25,0,Neil Bruce ,F17
+7600,G01,15,15,,F17
+7720,T03,15,0,Shahin Kamali ,F17
+7800,G01,15,15,,F17
+7860,T06,21,2,Noman Mohammed ,F17
+7900,G01,10,10,,F17
+7920,T03,15,8,Andrea Bunt ,F17
+7922,A01,1,0,Stephane Durocher ,F17
+7934,T01,15,8,Olivier Tremblay-Savard ,F17
+7942,T01,15,8,Rasit Eskicioglu ,F17
+7950,T02,15,1,Yang Wang ,F17

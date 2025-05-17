@@ -1,0 +1,101 @@
+1010,A01,100,35,Andrea Bunt ,W14
+1010,A02,100,47,John Bate ,W14
+1010,B01,28,12,John Bate ,W14
+1010,B02,28,10,John Bate ,W14
+1010,B03,28,12,John Bate ,W14
+1010,B04,28,16,John Bate ,W14
+1010,B05,28,11,John Bate ,W14
+1010,B06,28,13,John Bate ,W14
+1010,B07,28,12,John Bate ,W14
+1010,B08,28,20,John Bate ,W14
+1010,D01,500,473,Roberta Melvin ,W14
+1010,D02,500,498,Roberta Melvin ,W14
+1012,A01,145,20,Mayssam Amiri ,W14
+1012,A02,150,35,Terrance Andres ,W14
+1012,A91,2,0,,W14
+1012,B01,30,5,Terrance Andres ,W14
+1012,B02,30,6,Terrance Andres ,W14
+1012,B03,30,7,Terrance Andres ,W14
+1012,B04,30,6,Terrance Andres ,W14
+1012,B05,30,8,Terrance Andres ,W14
+1012,B06,30,5,Terrance Andres ,W14
+1012,B07,30,6,Terrance Andres ,W14
+1012,B08,30,4,Terrance Andres ,W14
+1012,B09,30,6,Terrance Andres ,W14
+1012,B10,30,7,Terrance Andres ,W14
+1020,A01,100,15,Geoffrey Nagy ,W14
+1020,A02,70,12,Gord Boyer ,W14
+1020,A03,70,15,David Harvey Scuse ,W14
+1020,B01,28,5,David Harvey Scuse ,W14
+1020,B02,28,4,David Harvey Scuse ,W14
+1020,B03,28,9,David Harvey Scuse ,W14
+1020,B04,28,17,David Harvey Scuse ,W14
+1020,B05,28,17,David Harvey Scuse ,W14
+1020,B06,28,4,David Harvey Scuse ,W14
+1020,B07,28,8,David Harvey Scuse ,W14
+1020,B08,28,12,David Harvey Scuse ,W14
+1020,B09,28,16,David Harvey Scuse ,W14
+1020,B10,28,6,David Harvey Scuse ,W14
+1020,B11,28,12,David Harvey Scuse ,W14
+1021,A01,10,4,,W14
+1260,A01,76,4,Daniel Page ,W14
+1260,A02,150,13,Gord Boyer ,W14
+1260,A03,80,8,Terrance Andres ,W14
+1260,A04,80,17,Saeed Mehrabidavoodabadi ,W14
+1260,D01,140,16,Md Rahman ,W14
+1270,A01,105,7,Alan Marshall ,W14
+1270,D01,75,15,Mehdi Niknam ,W14
+2080,A01,118,31,Helen Cameron ,W14
+2130,A01,85,21,John Van Rees ,W14
+2140,A01,72,16,Helen Cameron ,W14
+2140,B01,24,7,Helen Cameron ,W14
+2140,B02,24,2,Helen Cameron ,W14
+2140,B03,24,7,Helen Cameron ,W14
+2140,D01,100,58,Saeed Mehrabidavoodabadi ,W14
+2150,A01,180,63,Gord Boyer ,W14
+2160,A01,78,32,Rasit Eskicioglu ,W14
+2160,B01,26,13,,W14
+2160,B02,26,5,,W14
+2160,B03,26,14,,W14
+2191,A01,14,12,Aboubacar Bagayogo ,W14
+2280,A01,120,13,Randall Cooper ,W14
+2280,B01,24,2,Randall Cooper ,W14
+2280,B02,24,0,Randall Cooper ,W14
+2280,B03,24,9,Randall Cooper ,W14
+2280,B04,24,2,Randall Cooper ,W14
+2280,B05,24,0,Randall Cooper ,W14
+2980,A01,60,16,John Braico ,W14
+3010,A01,67,21,Peter Graham ,W14
+3040,A01,30,10,Alan Marshall ,W14
+3170,A01,60,38,William Kocay ,W14
+3350,A01,68,24,Hadi Hemmati ,W14
+3430,A01,94,47,James Young ,W14
+3430,B01,24,17,James Young ,W14
+3430,B02,24,4,James Young ,W14
+3430,B03,24,15,James Young ,W14
+3430,B04,24,13,James Young ,W14
+3620,A01,40,1,Alan Marshall ,W14
+3980,A01,60,54,John Braico ,W14
+4020,A01,36,8,Andrea Bunt ,W14
+4190,A01,40,10,Neil Bruce ,W14
+4350,A01,50,7,Michael Zapp ,W14
+4360,A01,30,15,Yang Wang ,W14
+4380,A01,50,0,Carson Leung ,W14
+4420,A01,35,14,Stephane Durocher ,W14
+4430,A01,25,7,Rasit Eskicioglu ,W14
+4490,A01,30,6,Neil Bruce ,W14
+4520,A01,10,4,Alan Marshall ,W14
+4550,A01,30,9,Jacky Baltes ,W14
+4560,A01,10,7,Alan Marshall ,W14
+4580,A01,46,8,Michael Zapp ,W14
+4980,A01,60,57,John Braico ,W14
+7210,A01,16,0,Michael Domaratzki ,W14
+7570,T04,15,5,Ruppa Thulasiram ,W14
+7600,G01,15,15,Michael Domaratzki ,W14
+7720,T02,15,11,Pakching Li ,W14
+7750,T02,20,1,Stephane Durocher ,W14
+7800,G01,15,14,Michael Domaratzki ,W14
+7850,A01,15,0,Parimala Thulasiraman ,W14
+7860,T05,5,2,Rasit Eskicioglu ,W14
+7900,G01,15,15,Michael Domaratzki ,W14
+7920,T01,15,9,James Young ,W14
