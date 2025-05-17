@@ -1,0 +1,283 @@
+---
+title: "AvailableSeatsCsDept"
+author: "2Lazy2BeOriginal"
+date: "2025-05-01"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r funcToGenerateTable, echo = FALSE}
+library(forcats)
+generateUnderGradTable <- function(start) {
+  factors <- c("code", "section", "capacity", "freeSpots", "profName", "sem")
+  #F06
+  yr <- start + 6
+  if (yr < 10) { 
+    yr <- paste0("0",yr) 
+  }
+  currSem <- read.table(paste("./F", yr, sep = ""), sep=",",col.names = factors) 
+  pooledTable <- data.frame(currSem)
+  # 0 is 2007
+  # this is from 2014
+  for (i in start:17) {
+    # find ending 2 digits
+    endDig <- 7 + i
+    # prefix 0 if not 10
+    if (endDig < 10) {
+      endDig <- paste0("0",endDig)
+    }
+    wintSem <- read.table(paste("./W", endDig, sep = ""), sep=",", col.names = factors) 
+    sumSem <- read.table(paste("./S", endDig, sep = ""), sep=",", col.names = factors) 
+    fallSem <- read.table(paste("./F", endDig, sep = ""), sep=",", col.names = factors) 
+    pooledTable <- rbind(pooledTable,wintSem,sumSem,fallSem)
+  }
+  #W25
+  currSem <- read.table("./W25", sep=",",col.names = factors) 
+  pooledTable <- rbind(pooledTable,currSem)
+  blackList <- c("2980","3980","4980")
+  
+  # discard lab and co op for this one
+  noLabsTable <- pooledTable[which(substr(pooledTable$section, 1, 1) != "B"),]
+  noCoop <- noLabsTable[which(!noLabsTable$code %in% blackList),]
+  # undergrad only and more than 5 people 
+  tbl <- noCoop[which(noCoop$code < 5000 & noCoop$capacity > 5),]
+  year <- paste("20",substr(tbl$sem,2,3),sep = "")
+  term <- substr(tbl$sem,1,1)
+  yearLvl <- fct_rev(paste(substr(tbl$code,1,1), "000", sep = ""))
+  cbind(tbl,year,term,yearLvl)
+}
+allUnderGradTbl <- generateUnderGradTable(0)
+```
+
+# Introduction
+
+The University Of Manitoba registration website (Aurora) contains track records dating back to Fall 2006. The goal of this document is to provide a visually pleasing way to accessing gradual change from Fall 2006 to Winter 2025. This is achieved by using the python library `Selenium` and webscrapping Aurora and copying certain data fields. A limitation with this approach is that there is no way of differentiating between days of the weeks are offered. This is because Aurora displays the weekday the class takes placed using a grid and coloured in squares and Selenium is unable to make the distinction. 
+
+Our dataset is stored in a data frame that contains the
+
+* code (4 positive digits)
+* section (Prefixed with 'A','B','D' or 'T' followed by a 2 digit code)
+* capacity (natrual number)
+* freeSpots (integer greater and including 0 but less than `capacity`)
+* profName (String)
+* Semester (Prefixed with 'F','W' or 'S' then 2 digits that indicate year)
+
+
+In particular we will see if there are certain patterns that determines a significant difference in Voluntary Withdrawl (VW) rates. 
+
+# Descriptive Statistics 
+
+## Summary of the professors with number of courses taught per year divided by year level
+
+Each course has a leading digit which is used to break up into different levels (either 1000,2000,3000,4000) and this determines roughly the order a student should be taking courses. A student would take a course in the 1000 level then progress to 2000 level. 
+
+As professors/instructors teach more, they start teaching more advanced courses specializing in their research/interests. Below are selected professors who have the most notable growth.
+
+
+```{r profTeachingPerYear divided by 1000, echo = FALSE, results=FALSE, warning=FALSE}
+library('forcats')
+library(ggplot2)
+showProfStat <- function(x) {
+  pfData <- allUnderGradTbl[which(allUnderGradTbl$profName == x),]
+  pfData <- pfData[order(pfData$yearLvl),]
+  ggplot(pfData) + geom_bar(data = pfData, aes(x = year, fill = yearLvl, color = yearLvl)) +
+  labs(title = paste("Number of classes taught per year divided by year for", x),
+       subtitle = "Fall 2013 to Winter 2025")
+}
+
+par(mfrow = c(5,5))
+compProfVec <- table(allUnderGradTbl$profName)[-1]
+compProfVec <- names(which(compProfVec > 10))
+# comment below line if you wanna see all the profs 
+compProfVecS <- c("Robert Guderian ", "Lauren Himbeault ", "Jennifer Vaughan ", "Heather Matheson ")
+#lapply(compProfVec, showProfStat)
+lapply(compProfVecS,showProfStat)
+```
+Three of the professors listed (Robert Guderian, Lauren Himbeault, and Jennifer Vaughan) are relatively new faculty members and it is interesting observing the pace the three have in progressing to teach higher level Computer Science classes.
+
+Heather Matheson is the noticeable outlier. It is still possible to see her gradually shift from teaching 2000 level to 3000 but overall the growth seems stagnant. Perhaps she enjoys teaching first year courses more
+
+Many other profs likely do not have as noticeable progression due to the data only dating back to Fall 2006. It seems that many were likely established and/or tenured prior to Fall2006 and so the data would appear stagnant for the more senior professors
+
+## Which prof has been teaching the same course over and over
+
+Some profs infamously just teach one course again and again. But which prof is the most guilty of not getting out of their comfort zone?
+
+```{r}
+getMostRepeatedCourse <- function(x) {
+  # only prof taught
+  df <- allUnderGradTbl[which(allUnderGradTbl$profName == x),]
+  tbl <- table(df$code)
+  return (sort(tbl, decreasing = TRUE)[1])
+}
+
+result <- sapply(compProfVec, getMostRepeatedCourse)
+# profName, order gives the indices we care about indices 
+#index <- order(result, decreasing = TRUE)[1:10]
+#compProfVec[index]
+sort(result, decreasing = TRUE)[1:30]
+```
+
+```{r tableFromp2018, echo = FALSE}
+shorternTbl <- generateUnderGradTable(10)
+```
+
+## Plot each open seat porportion based off class
+
+If you want a certain prof highlighted, go to `cherryPickProf` and create a vector of names you want to be on the legend or not. THe default is all the profs that I used to test this but feel free to add. **Don't forget to add a space to the end**
+
+```{r, echo = FALSE, results=FALSE, warning=FALSE}
+# load the ggplot2 library for plotting
+library(ggplot2)
+library("gridExtra")
+options(stringsAsFactors = FALSE)
+
+createCompPlot <- function(x) {
+    tempDf <- shorternTbl[which(shorternTbl$code == x & substr(shorternTbl$section, 1, 1) != "D"),]
+    # tell R to order by F13,W14,WS14...
+    tempDf$sem <- factor(tempDf$sem, levels = unique(tempDf$sem))
+    # pick rasit,zapp,tulsi,pazdor with diff colors
+    cherryPickProf <-  c("Rasit Eskicioglu ", "Michael Zapp ", "Adam Pazdor ", "Franklin Bristow ", "Lauren Himbeault ", "Heather Matheson ", "Robert Guderian ")
+    tempDf$profName[!tempDf$profName %in% cherryPickProf] <- "other"
+    ggplot(data = tempDf, aes(x = sem, y = freeSpots / capacity, color = profName)) +
+    geom_point() +
+    scale_x_discrete(guide = guide_axis(angle = 90)) +
+    labs(x = "Semester",
+      y = "Open space",
+      title = paste("Comp", x, "Open seating divided by capacity (Lower is better)"),
+      subtitle = "Fall 2013 to Winter 2025")
+     #scale_color_manual(values =  c("Rasit Eskicioglu " = "red", "Michael Zapp " = "purple", "Adam Pazdor " = "blue", "Franklin Bristow " = "green", "other" = "black"))
+}
+
+# function to extract legend from plot 
+get_only_legend <- function(plot) { 
+  plot_table <- ggplot_gtable(ggplot_build(plot)) 
+  legend_plot <- which(sapply(plot_table$grobs, function(x) x$name) == "guide-box") 
+  legend <- plot_table$grobs[[legend_plot]] 
+  return(legend) 
+}
+
+
+#compClassVec <- table(underGradTable$code)
+#compClassVec <- names(which(compClassVec > 21))
+#compClassVec <- compClassVec[!compClassVec %in% c("","1260","1270","2980","3040","3980","4980")]
+plotVec <- lapply(c("1010","1020","2140","2160","3430","3380","4620"), createCompPlot)
+#grid.arrange(grobs=plotVec,common.legend = TRUE, nrow=4)
+plotVec
+```
+
+# Inferential Statistics 
+
+The follow sections will explore the relationship between withdraw rates among various factors. One key assumption in this is that the class sizes are full at the start of the semester. This will simplify calculations to a simple proportion in which we can just divide the open seats available (corresponds to number of students dropped in a course) with the capacity. 
+
+There is no definitive semester where this assumption is consistently met but for now, we will limit our dataset from Fall2018 to Winter2025 
+
+The primary test used will be the Chi-square test of independence. We have well established data and our groups are easily defined. (Note this assumes independence which is not the case since the same student would progress but for something to post on reddit this is fine)
+
+## Does a course level have a higher drop rate in comparison to others 
+
+A natural assumption is that first year courses generally perform worse compared to later years. 
+
+### Test if there even is a difference 
+
+```{r chiSqrDroprate By level, echo = FALSE}
+blackList <- c("1002","1006")
+tempTbl <- shorternTbl[which(shorternTbl$capacity < 250 & shorternTbl$code != blackList),]
+# count how many stayed in a course divided by year lvl
+sumDrop <- sapply(1:4*1000, function(x) {
+  sum(tempTbl[which(tempTbl$yearLvl == x),"freeSpots"])
+})
+# count how many dropped a course divided by year lvl
+sumStayed <- sapply(1:4*1000, function(x) {
+  sum(tempTbl[which(tempTbl$yearLvl == x),"capacity"] - tempTbl[which(tempTbl$yearLvl == x),"freeSpots"])
+})
+chisq.test(rbind(sumStayed,sumDrop))$p.value
+```
+Don't take too seriously despite how obvious this sounds since this is missing an important assumption. 
+
+## Lauren 
+
+The plots would indicate that Lauren overall has a lower drop rate than other profs teaching the same course but is there a way to quantify this? The (naive) approach is to just pool all the students together disregarding the semester taught. And again use a chisq test of independence.
+
+**Note:** chisq test doesn't tell is the magnitude of the difference, so for all we know Lauren could be worse but judging by the plots it's clear Lauren is on the lower end.
+
+This is also not independent but it is more "believable" compared to the comparing 1000,2000 since the probability a student retakes a course **with the same professor** (considered resampling in this case) is exceptionally low.
+
+Independence is broken due to students may for example have taken Lauren before and have a "slight" advantage compared to those who haven't.
+
+To Use this, the first parameter is the 
+* code (4 digit code)
+* profName (Remember to add a space at the end because I am dumb :p )
+
+To check overall trend it helps to plot each prof on their own and see if they tend to be lower on the graph (better) or higher
+
+```{r, echo = FALSE}
+testDiffVW <- function(code, x) {
+  tempDf <- shorternTbl[which(shorternTbl$code == code & substr(shorternTbl$section, 1, 1) != "D"),]
+  tempDf$profName[tempDf$profName != x] <- "other"
+  paste(tempDf$profName)
+  sumDrop <- sapply(c(x,"other"), function(x) {
+  sum(tempDf[which(tempDf$profName == x),"freeSpots"])
+  })
+  # count how many dropped a course divided by year lvl
+  sumStayed <- sapply(c(x,"other"), function(x) {
+    sum(tempDf[which(tempDf$profName == x),"capacity"] - tempDf[which(tempDf$profName == x),"freeSpots"])
+  })
+  res <- chisq.test(rbind(sumDrop,sumStayed))
+  paste(code, x, "p value ",res$p.value)
+}
+
+testDiffVW("1020", "John Braico ")
+testDiffVW("1010","Lauren Himbeault ")
+testDiffVW("1012","Lauren Himbeault ")
+testDiffVW("1020","Lauren Himbeault ")
+testDiffVW("2140","Lauren Himbeault ")
+testDiffVW("3350","Lauren Himbeault ")
+testDiffVW("1010","Heather Matheson ")
+# Seperate Test just for 3430 or OS
+```
+So the conclusion would be that Lauren is a noticeable improvement for first year courses since the drop rate is less in her sections compared to others. But for beyond first year, there is not as much of a difference. This could likely be because second year is when students are more stubborn to drop due to the fear of wait lists in addition to the courses not being too "difficult"
+
+## Comp3430
+
+Comp3430 has been infamously been taught by Rasit, but does the professor really affect how likely a student will drop the class or will students accept defeat and continue taking the class. 
+
+```{r, echo = FALSE}
+testDiffVWVec <- function(code, x) {
+  tempDf <- shorternTbl[which(shorternTbl$code == code & substr(shorternTbl$section, 1, 1) != "D"),]
+  tempDf$profName[!tempDf$profName %in% x] <- "other"
+  paste(tempDf$profName)
+  sumDrop <- sapply(c(x,"other"), function(x) {
+  sum(tempDf[which(tempDf$profName == x),"freeSpots"])
+  })
+  # count how many dropped a course divided by year lvl
+  sumStayed <- sapply(c(x,"other"), function(x) {
+    sum(tempDf[which(tempDf$profName == x),"capacity"] - tempDf[which(tempDf$profName == x),"freeSpots"])
+  })
+  res <- chisq.test(rbind(sumDrop,sumStayed))
+  paste(code, x, "p value ",res$p.value)
+}
+testDiffVWVec("3430", c("Robert Guderian ", "Franklin Bristow ", "Rasit Eskicioglu "))
+```
+So yes there is a clear difference between Rasit and Franklin and Rob. Unfortunately this could either mean (Rasit is much worse than the other 2) or (Franklin/Rob is far better than the other 2). But the plot would clearly suggest Rasit is noticably worse. (Ignore the outlier in W25.) And also keep in mind the scale, it is from 20-60% drop rate
+
+## Is there a corelation between rateMyProf ratings and drop rate
+
+## which classes on average have higher drop rates
+
+This pools all the sections together for a given code and then calculates the porportion of free spots over the capacity. This would ignore that some years perform worse but it isn't that deep.
+(Lower is better)
+
+```{r meanDrop2}
+allCodes <- unique(shorternTbl$code)
+myMeans <- sapply(allCodes, function(x) {y <- shorternTbl[which(shorternTbl$code == x),]
+sum(y$freeSpots) / sum(y$capacity)
+})
+names(myMeans) <- allCodes
+sort(myMeans)
+```
